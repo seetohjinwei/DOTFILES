@@ -1,0 +1,247 @@
+{
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.wordBasedSuggestions": "off",
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "[sql]": {
+    "editor.tabSize": 2
+  },
+  "python.analysis.completeFunctionParens": true,
+  "explorer.confirmDragAndDrop": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.startupEditor": "none",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "explorer.confirmDelete": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.rulers": [120],
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.tabSize": 4,
+  "editor.wordWrap": "on",
+  "git.confirmSync": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.lineNumbers": "on",
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/bower_components/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.vimrc.enable": true,
+  "vim.leader": ";",
+  "vim.visualstar": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["editor.action.formatDocument"],
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": [
+        "workbench.action.compareEditor.nextChange",
+        "editor.action.dirtydiff.next"
+      ]
+    },
+    {
+      "before": ["<leader>", "D"],
+      "commands": [
+        "workbench.action.compareEditor.previousChange",
+        "editor.action.dirtydiff.previous"
+      ]
+    },
+    {
+      "before": ["<C-w>", "r"],
+      "commands": [
+        "workbench.action.focusFirstEditorGroup",
+        "workbench.action.moveActiveEditorGroupRight",
+        "workbench.action.focusFirstEditorGroup"
+      ]
+    },
+    {
+      "before": ["<leader>", "E"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "s", "F"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<C-w>", "m"],
+      "commands": ["workbench.action.toggleMaximizeEditorGroup"]
+    },
+    {
+      "before": ["<C-w>", "M"],
+      "commands": ["workbench.action.toggleZenMode"],
+      "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+      "before": ["<leader>", "g", "b"],
+      "commands": ["git.blame.toggleStatusBarItem"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["git.refresh"]
+    }
+    // {
+    //   "before": ["<leader>", "g", "s"],
+    //   "commands": [
+    //     "workbench.action.createTerminalEditor",
+    //     {
+    //       "command": "workbench.action.terminal.sendSequence",
+    //       "when": "terminalFocus",
+    //       "args": { "text": "vim +Git +only\n" }
+    //     }
+    //   ]
+    // }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-k>"],
+      "commands": [
+        "editor.action.triggerParameterHints",
+        "editor.action.triggerSuggest"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // {
+    //   // a bit scuffed
+    //   "before": ["<leader>", "s", "j"],
+    //   "commands": [
+    //     {
+    //       "command": "extension.splitLine",
+    //       "when": "editorTextFocus && !editorReadonly",
+    //       "args": {
+    //         "separator": ",",
+    //         "breakStartEnd": true,
+    //         "breakBeforeSeparator": false
+    //       }
+    //     }
+    //   ]
+    // }
+  ],
+  "terminal.integrated.showExitAlert": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.preferredDarkColorTheme": "One Monokai",
+  "cSpell.language": "en-GB",
+  "cSpell.userWords": [
+    "bigquery",
+    "curr",
+    "datetimes",
+    "deque",
+    "Deserialise",
+    "ecommerce",
+    "fastapi",
+    "jinwei",
+    "leetcode",
+    "lexer",
+    "pymysql",
+    "raynor",
+    "resp",
+    "seetohjinwei",
+    "Singpass",
+    "sqlmodel",
+    "starlette",
+    "strs",
+    "tassadar",
+    "teardown",
+    "templ",
+    "zerolog"
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "One Monokai",
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "go.lintOnSave": "package",
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "terminal.integrated.fontFamily": "JetBrains Mono, MesloLGL NF, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.output.textLineLimit": 100,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "jupyter.askForKernelRestart": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.fontSize": 14,
+  "editor.codeActionsOnSave": {},
+  "terminal.integrated.fontSize": 14,
+  "chat.editor.fontSize": 14,
+  "scm.inputFontSize": 14,
+  "debug.console.fontSize": 14,
+  "extensions.experimental.affinity": {
+    // "asvetliakov.vscode-neovim": 1
+    "vscodevim.vim": 1
+  },
+  "zig.initialSetupDone": true,
+  "zig.zls.path": "/Users/jinwei/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+  "zig.path": "zig",
+  "zenMode.hideLineNumbers": false,
+  "git.blame.statusBarItem.enabled": false,
+  "git.blame.editorDecoration.enabled": false
+}

@@ -1,0 +1,100 @@
+# Core
+[user]
+	name = Jin Wei
+	email = seetohjinwei@gmail.com
+[core]
+	excludesfile = /Users/jinwei/.gitignore_global
+	editor = nvim
+	autocrlf = input
+	# always paginates; forces full-screen; aligns content to the top; after exiting, nothing is left behind
+	pager = less -+F -+X -Rc
+[color]
+	ui = auto
+[help]
+	autocorrect = prompt
+
+# Commits
+[init]
+	defaultBranch = main
+[branch]
+	# sorts the git branches
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[commit]
+	verbose = true
+[rerere]
+	# reuse recorded resolution (remembers how you resolved a conflict)
+	# https://git-scm.com/book/en/v2/Git-Tools-Rerere
+	enabled = true
+	autoupdate = true
+[grep]
+	extendedRegexp = true
+[diff]
+	wsErrorHighlight = all
+	tool = default-difftool
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[column]
+	# changes git branch to output the branches in columns
+	ui = auto
+
+# Remote
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[pull]
+	rebase = true
+[merge]
+	conflictstyle = zdiff3
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+# Aliases
+[alias]
+	cc = commit
+	ca = commit --amend
+
+	co = checkout
+	cob = checkout -b
+
+	lol = log --oneline
+	lol2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
+
+	# patch add
+	addp = add -p
+
+	# Regular fetch can throw an error "would clobber existing tag"
+	fetcht = fetch --tags --force
+
+	diffs = diff --staged
+	unstage = restore --staged
+
+	# https://stackoverflow.com/questions/2845731/how-to-uncommit-my-last-commit-in-git
+	# undo the act of committing, leaving everything else intact
+	uncommit = reset --soft HEAD^
+	# hard resets everything to previous commit (removes **everything**)
+	destroy = reset --hard HEAD^
+
+	# All ignored and untracked files are also stashed and then cleaned up with git clean.
+	st = stash --all
+
+	# git bl -L 15,26 path/to/file
+	bl = blame -w -C -C -C
+
+	# diff by words instead of lines
+	diffword = diff --word-diff
+
+	# force push, but it checks if it is safe to force first
+	pushforce = push --force-with-lease

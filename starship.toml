@@ -1,0 +1,59 @@
+add_newline = false
+command_timeout = 500
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$line_break\
+$battery\
+$character"""
+
+[username]
+style_user = "bold blue"
+style_root = "bold red"
+format = "[$user]($style) "
+disabled = false
+show_always = false # This hides it on your local machine if you are the default user
+
+[hostname]
+ssh_only = true # This is the magic toggle
+format = "on [$hostname](bold yellow) "
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+style = "bold cyan"
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+renamed = "»"
+deleted = "✘"
+
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[cmd_duration]
+min_time = 2_000 # Only show if it took more than 2 seconds
+format = "took [$duration]($style) "
+style = "yellow"
+
+[[battery.display]]  # "bold red" style and discharging_symbol when capacity is between 0% and 20%
+threshold = 20
+style = "bold red"
+
+[[battery.display]]  # "bold yellow" style and ?? symbol when capacity is between 20% and 40%
+threshold = 40
+style = "bold yellow"
